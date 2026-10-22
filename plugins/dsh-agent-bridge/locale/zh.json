@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Agent Bridge",
+    "description": "开启后，仅在本机 127.0.0.1 提供随机令牌保护的控制接口，供外部智能体操作 DeepSeek Harness：会话、模型、消息、回复与授权。关闭后停止接口并删除令牌文件。"
+  }
+}

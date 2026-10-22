@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Agent Bridge",
+    "description": "When enabled, serves a token-protected control API on 127.0.0.1 so an external agent can drive DeepSeek Harness: sessions, models, prompts, replies, and approvals. Turning it off stops the API and deletes the token file."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "dsh-agent-bridge",
+  "version": "0.1.0",
+  "description": "Agent Bridge: a 127.0.0.1-only, token-protected control API so any local agent can drive DeepSeek Harness.",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": ["index.js", "cordis.patch.yml", "locale/*.json", "icon.svg", "README.md"],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" }
+  }
+}

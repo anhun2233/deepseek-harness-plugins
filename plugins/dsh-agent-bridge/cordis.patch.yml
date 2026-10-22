@@ -1,0 +1,5 @@
+# Agent Bridge: one Host plugin. Turn the bundle off on the Plugins page to stop the control API.
+- insert:
+    - id: dsh-agent-bridge
+      name: 'dsh-agent-bridge'
+      config: {}

@@ -1,0 +1,6 @@
+# Session Delete: one Host plugin (delete service and authenticated web route).
+# The client module adds the session-menu entry.
+- insert:
+    - id: dsh-session-delete
+      name: 'dsh-session-delete'
+      config: {}
