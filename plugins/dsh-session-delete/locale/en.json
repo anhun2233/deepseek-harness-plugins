@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session Delete",
+    "description": "Adds 'Delete permanently' to the session row menu: after confirmation the session log, cache and workspace entries are removed from DSH storage. Cannot be undone."
+  }
+}
