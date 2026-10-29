@@ -1,24 +1,46 @@
 {
   "name": "dsh-session-delete",
-  "version": "0.1.0",
-  "description": "Adds a permanent Delete item to the DeepSeek Harness session menu and removes that session's files from the DSH data directory.",
-  "license": "MIT",
+  "version": "0.2.2",
+  "description": "Adds a permanent Delete item to the DeepSeek Harness session menu, removes session files from the DSH data directory, and can clean orphan attachments (on by default).",
   "type": "module",
+  "engines": {
+    "node": ">=22.15.0"
+  },
   "main": "index.js",
   "exports": {
     ".": "./index.js",
+    "./attachments": "./attachments.js",
+    "./pending": "./pending.js",
     "./client": "./client.js",
     "./package.json": "./package.json",
     "./locale/*.json": "./locale/*.json",
     "./icon": "./icon.svg"
   },
-  "files": ["index.js", "client.js", "cordis.patch.yml", "locale/*.json", "icon.svg", "README.md"],
+  "files": [
+    "index.js",
+    "attachments.js",
+    "pending.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "~3.18.5"
+  },
   "dsh": {
-    "bundle": { "patch": "./cordis.patch.yml" },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
     "client": {
       "platform": "web",
       "immediately": true,
-      "inject": ["@deepseek-ai/dsh-client-ui-workspace", "@deepseek-ai/dsh-client-ui-layout"]
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
     }
-  }
+  },
+  "license": "MIT"
 }

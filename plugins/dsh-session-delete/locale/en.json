@@ -1,6 +1,15 @@
 {
   "meta": {
     "title": "Session Delete",
-    "description": "Adds 'Delete permanently' to the session row menu: after confirmation the session log, cache and workspace entries are removed from DSH storage. Cannot be undone."
+    "description": "Permanently deletes sessions and can optionally remove attachment blobs no longer referenced by any session. Includes a dry-run orphan scan command. Cannot be undone."
+  },
+  "settings": {
+    "autoDeleteAttachments": {
+      "title": "Delete unreferenced attachments with sessions",
+      "description": "Default on. After session deletion, remove only blobs that no remaining disk, archived, or in-memory session references."
+    }
+  },
+  "commands": {
+    "scanAttachments": "Scan orphan attachments (dry-run by default); append --confirm to delete."
   }
 }

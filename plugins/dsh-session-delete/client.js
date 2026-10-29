@@ -10,15 +10,15 @@ window.__ModuleLoader__.load({
       menu: () => zh() ? '永久删除' : 'Delete permanently',
       title: () => zh() ? '永久删除会话？' : 'Delete session permanently?',
       desc: (t) => zh()
-        ? `「${t || '未命名会话'}」的全部消息、记录和缓存会从 DSH 存储中删除，无法恢复。`
-        : `All messages, logs and caches of "${t || 'Untitled session'}" are removed from DSH storage. This cannot be undone.`,
+        ? `「${t || '未命名会话'}」的全部消息、记录和缓存会从 DSH 存储中删除，无法恢复。附件自动清理默认开启；启用时，不再被任何会话引用的附件也会删除。`
+        : `All messages, logs and caches of "${t || 'Untitled session'}" are removed from DSH storage. This cannot be undone. Automatic attachment cleanup is on by default; when enabled, blobs no longer referenced by any session are also removed.`,
       cancel: () => zh() ? '取消' : 'Cancel',
       confirm: () => zh() ? '永久删除' : 'Delete',
       busy: () => zh() ? '正在删除…' : 'Deleting…',
       close: () => zh() ? '关闭' : 'Close',
       deferred: () => zh()
-        ? '会话已移出列表。它正在本次运行中使用，磁盘文件会在退出或下次启动 DSH 时清除。'
-        : 'Removed from the list. It is loaded in this run, so its files are removed when DSH exits or next starts.',
+        ? '会话已移出列表。它正在本次运行中使用，磁盘文件和符合条件的附件会在退出或下次启动 DSH 时清除。'
+        : 'Removed from the list. It is loaded in this run, so its files and eligible attachments are removed when DSH exits or next starts.',
     }
 
     // Tiny shared store: the menu row raises a request, the overlay dialog answers it.

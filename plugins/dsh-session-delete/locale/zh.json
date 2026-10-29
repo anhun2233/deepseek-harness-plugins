@@ -1,6 +1,15 @@
 {
   "meta": {
     "title": "会话删除",
-    "description": "在侧栏会话的「…」菜单里加入「永久删除」：确认后从 DSH 存储中彻底删除该会话（会话日志、缓存和工作区记录），不可恢复。"
+    "description": "永久删除会话，并可选清理不再被任何会话引用的附件；提供默认 dry-run 的孤儿附件扫描命令，不可恢复。"
+  },
+  "settings": {
+    "autoDeleteAttachments": {
+      "title": "删除会话时清理无引用附件",
+      "description": "默认开启。会话删除后，仅清理不再被任何磁盘、归档或内存会话引用的附件。"
+    }
+  },
+  "commands": {
+    "scanAttachments": "扫描孤儿附件（默认 dry-run）；追加 --confirm 才会删除。"
   }
 }
